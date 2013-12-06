@@ -15,7 +15,7 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-In this paper, we focus on the problem of classifying images of cats and dogs, which is also known as one Asirra. We use three schemes to tackle the problem. First, we use information of the whole image; second, we use information of the animal body; third, we only use features from the head. The asymptotic behavior of the classification improves when we restrict the regions to the more distinguishable ones. We obtain ??, ??, and ?? under our best choice of features and voting scheme.  We anticipate that the performance of the second and third scheme will improve moderately if including more training samples.    
+In this paper, we focus on the problem of classifying images of cats and dogs, which is also known as one Asirra. We use three schemes to tackle the problem. First, we use information of the whole image; second, we use information of the animal body; third, we only use features from the head. The asymptotic behavior of the classification improves when we restrict the regions to the more distinguishable ones. We obtain 82.3$\%$, 84.4$\%$, and 85.6$\%$ under our best choice of features and voting scheme.  We anticipate that the accuracy of the second and third scheme will improve moderately if including more training samples.    
 \end{abstract}
 
 
@@ -31,8 +31,7 @@ in dynamical environments, achieved with high processing speed.  Another interes
 
 
 The usage of larger face sizes (48x48) slightly improves the performance of some methods (for example Adaboost-Rect features and Adaboost-Wav), however the training time increases exponentially (from hours to days).
-Shape feature, which is used in $\cite{sun}$ to detect cat head, is also a first guess. It could have two usages: first, to crop out heads; second, to distinguish the dogs and cats. Although plausible at the first glance, the second usage was rejected once we realize there are cat-like dogs and dog-like cats, especially look alike in terms of shape. The first usage is not adopted in this project because it will take too long to train the classifier. As suggested by $\cite{sun}$, 
-cat ears
+Shape feature, which is used in $\cite{sun}$ to detect cat head, is also a first guess. It could have two usages: first, to crop out heads; second, to distinguish the dogs and cats. Although plausible at the first glance, the second usage was rejected once we realize there are cat-like dogs and dog-like cats, especially look alike in terms of shape. The first usage is not adopted in this project because it will take too long to train the classifier. As suggested by $\cite{sun}$,  cat ears
 
 \section{Color Feature}
 We first normalize all our pictures to be 250px$ \times $250px. This operation will change the ratio of width and height. However, this won't affect results since we are only interested in the color feature of the picture but not the size or shape of the animals. We divide the picture into $n\times n$ square cells with equal size. \\
@@ -150,11 +149,15 @@ some result
 
 Analysis of result. Not satisfying possibly because not aligned and normalized.
 \subsection{Cascade of Classifier}
-The idea is similar to a decision tree. At each layer of the cascade is a classifier and an example will be rejected immediately if it is rejected by one layer. When training the classifier, at each layer, we use boosting algorithms to select important features and find a reasonable threshold that almost all positive training examples will be left and a decent amount of negative training examples will be rejected. This way, negative examples will be rejected quickly while only a small number of positive examples will be misclassified. For the same reason, a large amount of negative examples are required. In $\cite{viola}$, Viola and Jones trained 9544 face images and 350 million background images to get a 37 layers of cascade classifier. In our project, we trained 400 cat heads, 400 dog heads, and 20 thousand background images with a 15 layers of cascade. We arrived at 4$\%$ false positive rate and $1\%$ false negative rate.   
+The idea is similar to a decision tree. At each layer of the cascade is a classifier and an example will be rejected immediately if it is rejected by one layer. When training the classifier, at each layer, we use boosting algorithms to select important features and find a reasonable threshold that almost all positive training examples will be left and a decent amount of negative training examples will be rejected. This way, negative examples will be rejected quickly while only a small number of positive examples will be misclassified. For the same reason, a large amount of negative examples are required. In $\cite{viola}$, Viola and Jones trained 9544 face images and 350 million background images to get a 37 layers of cascade classifier. In our project, we trained 400 cat heads, 400 dog heads, and 20 thousand background images with a 15 layers of cascade. We arrived at 4$\%$ false negative rate and $1\%$ false positive rate.   
 
-some result
+some result compare adaboost and logtiboost compare different layers result
 
-\subsection{Classification}
+\subsection{Searching among Subwindows}
+
+The universal technique is to test sub-windows with all possible location and sizes in the images and `merge' all positive sub-windows with close location and sizes. However, this requres a high performance classifier, usually with false positive rates in the magnitude of $10^{-4}$, because the large amount of negative sub-windows in the image. Since our classifier can only achieve 1\\ADD SOME HEAD IMAGES HERE\\Almost all results include part of head here. The problem is some are too big or too small. We expect that this can be improved by merging similar sub-windows which we did not have enough time to implement. Yet the current result is rather satisfying considering the small amount of training examples we used. We also found that the algorithm performs much better on image contains moderate size heads which often occupy 1/16-1/4 of the the original image size. This is reasonable as there are less sub-windows contains the head if head is too small or too large.
+\subsection{Cat and Dog Classifcation}
+Similar as training the head classifier, we use boosting algorithms with HOOG or rectangular features as our feature vector to classify cat heads and dog heads. We trained our classifier on 250 cat head images and 250 dog images and tested its performance on manually cropped heads and on machine cropped heads.
 
 \section{Results}
 
