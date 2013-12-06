@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  5 DEC 2013 21:12
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  5 DEC 2013 21:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -236,121 +236,77 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for U+stmry on input line 16.
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/stmaryrd/Ustmry.fd) [1
 
-LaTeX Warning: Citation `viola' on page  undefined on input line 26.
-
-
-LaTeX Warning: Citation `viola' on page  undefined on input line 26.
-
-[1
-
-{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2]
-
-LaTeX Warning: Citation `sun' on page  undefined on input line 34.
-
-
-LaTeX Warning: Citation `sun' on page  undefined on input line 34.
-
-
+{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 Overfull \hbox (12.24066pt too wide) in paragraph at lines 33--36
 \OT1/cmr/m/n/12 meth-ods (for ex-am-ple Adaboost-Rect fea-tures and Adaboost-Wa
 v), how-ever the train-ing
  []
 
 
-Overfull \hbox (1.50208pt too wide) in paragraph at lines 48--67
- [][] 
- []
-
-[3] <glcm.png, id=21, 308.15125pt x 273.02pt>
-File: glcm.png Graphic file (type png)
- <use glcm.png>
-Package pdftex.def Info: glcm.png used on input line 76.
-(pdftex.def)             Requested size: 170.71652pt x 151.2571pt.
-
-Overfull \hbox (2.02225pt too wide) in paragraph at lines 75--81
-\OT1/cmr/m/n/12 Con-trast, Cor-re-la-tion, En-ergy and Ho-mo-gene-ity. Con-tras
-t is a mea-sure of the in-ten-sity
- []
-
-
-Overfull \hbox (6.1347pt too wide) in paragraph at lines 75--81
-\OT1/cmr/m/n/12 pixel is to its neigh-bor; En-ergy is a mea-sure of the whole i
-m-age's in-ten-sity; Ho-mo-gene-ity
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 75--81
-
- []
-
-[4]
-Overfull \hbox (25.20375pt too wide) in paragraph at lines 84--88
-\OML/cmm/m/it/12 TF[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 o; \OT1/cmr/m/n/12 2)$, 
-$\OML/cmm/m/it/12 TF[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 o; \OT1/cmr/m/n/12 3)$,
- $\OML/cmm/m/it/12 TF[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 o; \OT1/cmr/m/n/12 4)$
- de-note $\OML/cmm/m/it/12 G[]$\OT1/cmr/m/n/12 's Con-trast, Cor-re-la-tion, En
--ergy and Ho-mo-gene-ity
- []
-
-[5 <./glcm.png>]
-Overfull \hbox (20.45871pt too wide) in paragraph at lines 117--127
+Overfull \hbox (1.50208pt too wide) in paragraph at lines 43--62
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[6]
+[3] <glcm.png, id=21, 308.15125pt x 273.02pt>
+File: glcm.png Graphic file (type png)
+ <use glcm.png>
+Package pdftex.def Info: glcm.png used on input line 71.
+(pdftex.def)             Requested size: 170.71652pt x 151.2571pt.
 
-LaTeX Warning: Citation `sun' on page  undefined on input line 136.
+Overfull \hbox (6.0847pt too wide) in paragraph at lines 70--77
+\OML/cmm/m/it/12 TF[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 o; i\OT1/cmr/m/n/12 )(1 
+\OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 i \OMS/cmsy/m/n/12 ^^T \OT1/cmr/m/n/12 4)
+$ rep-re-sent the $\OML/cmm/m/it/12 G[]$\OT1/cmr/m/n/12 's Con-trast, Cor-re-la
+-tion, En-ergy and Ho-mo-gene-ity
+ []
 
 
-LaTeX Warning: Citation `viola' on page  undefined on input line 139.
+Underfull \hbox (badness 10000) in paragraph at lines 70--77
 
-[7]
+ []
+
+[4 <./glcm.png>]
+Overfull \hbox (20.45871pt too wide) in paragraph at lines 117--127
+ [][] 
+ []
+
+[5] [6]
 Overfull \hbox (3.62706pt too wide) detected at line 145
 \OML/cmm/m/it/12 HOOG[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 R[]; R[]; k\OT1/cmr/m/
 n/12 ) = []\OML/cmm/m/it/12 ;  [] []HOOG[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 R[]
 ; R[]; k\OT1/cmr/m/n/12 ) = []\OML/cmm/m/it/12 :
  []
 
-
-LaTeX Warning: Citation `viola' on page  undefined on input line 153.
-
-[8] [9] (./paper.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[7] [8] (./paper.aux) ) 
 Here is how much of TeX's memory you used:
  2576 strings out of 493488
  33779 string characters out of 3141326
- 96246 words of memory out of 3000000
+ 95252 words of memory out of 3000000
  5841 multiletter control sequences out of 15000+200000
  14582 words of font info for 57 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 37i,11n,24p,3887b,223s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
-/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
-usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
-r/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
-cal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loca
-l/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
-exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on paper.pdf (9 pages, 158895 bytes).
+ 37i,11n,24p,3879b,223s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2012/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmbx10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmbx12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmex10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi8.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr17.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr8.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti1
+2.pfb>
+Output written on paper.pdf (8 pages, 157523 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
+ 78 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
