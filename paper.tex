@@ -149,9 +149,23 @@ some result
 
 Analysis of result. Not satisfying possibly because not aligned and normalized.
 \subsection{Cascade of Classifier}
-The idea is similar to a decision tree. At each layer of the cascade is a classifier and an example will be rejected immediately if it is rejected by one layer. When training the classifier, at each layer, we use boosting algorithms to select important features and find a reasonable threshold that almost all positive training examples will be left and a decent amount of negative training examples will be rejected. This way, negative examples will be rejected quickly while only a small number of positive examples will be misclassified. For the same reason, a large amount of negative examples are required. In $\cite{viola}$, Viola and Jones trained 9544 face images and 350 million background images to get a 37 layers of cascade classifier. In our project, we trained 400 cat heads, 400 dog heads, and 20 thousand background images with a 15 layers of cascade. We arrived at 4$\%$ false negative rate and $1\%$ false positive rate.   
+The idea is similar to a decision tree. At each layer of the cascade is a classifier and an example will be rejected immediately if it is rejected by one layer. When training the classifier, at each layer, we use boosting algorithms to select important features and find a reasonable threshold that almost all positive training examples will be left and a decent amount of negative training examples will be rejected. This way, negative examples will be rejected quickly while only a small number of positive examples will be misclassified. For the same reason, a large amount of negative examples are required. In $\cite{viola}$, Viola and Jones trained 9544 face images and 350 million background images to get a 37 layers of cascade classifier. In our project, we trained 400 cat heads, 400 dog heads, and 20 thousand background images with a 6 layers of cascade. We arrived at 5$\%$ false negative rate and $1\%$ false positive rate.   
 
-some result compare adaboost and logtiboost compare different layers result
+
+\begin{table}[h]
+\caption{Performance of some cascaded classifiers}
+\centering
+\begin{tabular}{| p{8cm}| l | l | l | l |}
+\hline
+performance & model 1 & model 2 & model 3 & model 4 
+\hline
+false negative rate & $17.51\%$ & $35.51\%$& $5.26\%$ & $20.19\%$
+\hline
+false positive rate & $12.68\%$ & $3.83\%$& $2.90\%$ & $<0.1\%$
+\end{tabular}
+\end{table}\\
+
+All models use rectangle features as feature vectors. Each layer of the cascade uses logitBoost. Model 1 and 2 are trained from 200 cat heads, 200 dog heads, 5 thousand background images with 5 layers of cascade. Model 1 is adjust by some threshold while model 2 uses 0 as threshold. Model 3 and 4 are trained from 400 cat heads, 400 dog heads and 20 thousand background images with 6 layers of cascade and model 3 has adjusted thershold. We can see that using more thresh training examples has a tremendous improvement in performance, especially for false positive rate. We believe that by adding more training examples the classifier can achieve a $<5\%$ false negative rate and $<10^{-4}$ positive rate.
 
 \subsection{Searching among Subwindows}
 
