@@ -109,8 +109,8 @@ HOOG is also a good feature to describe a picture's texture. A detailed discript
 
 
 \section {Combination of Color and Texture Feature}
-We need to come up with a way to combine color and texture features to get a better classifier. Assume that color feature vector has a length of $N_c$, the texture feature has a length of $N_t$. Our first approach is to concatenate the two feature vectors into a longer feature vector with a length of $N_c + N_t$. Then we will run boosting algorithm using the new feature vector. \\
-The second approach is combining two classifiers instead of combing two feature vectors. Recall that for boosting classifier, each picture will have a voting. Assume that classfier 1 gives the picture a voting $v_1$, and classifier 2 gives the picture a voting $v_2$. Given parameter $\alpha$, we calculate a new voting $ v = \alpha \times v_1 + (1-\alpha) \times v_2$. If $v \geq 0$, we classify the picture to be a cat picture; otherwise, we classify the picture to be a dog picture. We use different $\alpha$ to form different classifiers and use them to test on our training examples. Then we find one with the highest correction rate, and use that classifier to classify test examples to calculate correction rate. \\
+Assume that color feature vector has a length of $N_c$, the texture feature has a length of $N_t$. Our first approach is to concatenate the two feature vectors into a longer feature vector with a length of $N_c + N_t$. Then we will run boosting algorithm using the new feature vector. \\
+The second approach is combining two classifiers instead of combing two feature vectors. Recall that for boosting classifier, each picture will have a voting. Assume that classfier 1 gives the picture a voting $v_1$, and classifier 2 gives the picture a voting $v_2$. Given parameter $\alpha$, we calculate a new voting $ v = \alpha \times v_1 + (1-\alpha) \times v_2$. We use different $\alpha$ to form different classifiers and use them to test on our training examples, and find one with the highest correction rate.
 \begin{table}[h]
 \caption{Combined Feature Training Result}
 \centering
@@ -125,7 +125,7 @@ $F_1$ = HSV($n=3,x=10,y=10,z=10$), $F_2$ = TF1($n=8,N_f=24$) & 72.7\% & 67.1\% &
 \hline
 \end{tabular}
 \end{table}\\
-From Table 3, we can see that both of the approaches achieve a better correction rate, and approach 2 is better than approach 1.
+From Table 3, we can see that both of the approaches achieve a better correction rate, and approach 2 is better than approach 1. 
 
 
 \section{Attack on Head Detection and Classification}
@@ -156,7 +156,9 @@ some result compare adaboost and logtiboost compare different layers result
 
 \subsection{Searching among Subwindows}
 
-The universal technique is to test sub-windows with all possible location and sizes in the images and `merge' all positive sub-windows with close location and sizes. However, this requres a high performance classifier, usually with false positive rates in the magnitude of $10^{-4}$, because the large amount of negative sub-windows in the image. Since our classifier can only achieve 1\\ADD SOME HEAD IMAGES HERE\\Almost all results include part of head here. The problem is some are too big or too small. We expect that this can be improved by merging similar sub-windows which we did not have enough time to implement. Yet the current result is rather satisfying considering the small amount of training examples we used. We also found that the algorithm performs much better on image contains moderate size heads which often occupy 1/16-1/4 of the the original image size. This is reasonable as there are less sub-windows contains the head if head is too small or too large.
+The universal technique is to test sub-windows with all possible location and sizes in the images and `merge' all positive sub-windows with close location and sizes. However, this requres a high performance classifier, usually with false positive rates in the magnitude of $10^{-4}$, because the large amount of negative sub-windows in the image. Since our classifier can only achieve 1\\
+ADD SOME HEAD IMAGES HERE\\
+Almost all results include part of head here. The problem is some are too big or too small. We expect that this can be improved by merging similar sub-windows which we did not have enough time to implement. Yet the current result is rather satisfying considering the small amount of training examples we used. We also found that the algorithm performs much better on image contains moderate size heads which often occupy 1/16-1/4 of the the original image size. This is reasonable as there are less sub-windows contains the head if head is too small or too large.
 \subsection{Cat and Dog Classifcation}
 Similar as training the head classifier, we use boosting algorithms with HOOG or rectangular features as our feature vector to classify cat heads and dog heads. We trained our classifier on 250 cat head images and 250 dog images and tested its performance on manually cropped heads and on machine cropped heads.
 
